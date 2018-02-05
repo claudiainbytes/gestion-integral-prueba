@@ -40,9 +40,11 @@ Se debe utilizar Bootstrap para dar aspecto visual al sitio.
 
 ## Demostración
 
+Clic sobre la imagen para ver el demo en YouTube
+
 [![Clic la imagen para ver demo en YouTube](https://img.youtube.com/vi/A57AdCUKsH8/0.jpg)](https://www.youtube.com/watch?v=A57AdCUKsH8)
 
-## Modelo Ciudad
+## Modelos
 
 Ciudad
 - id (llave primaria)
@@ -54,6 +56,7 @@ Cliente
 - apellidos
 - cedula
 - email
+- telefono
 - ciudad_id( llave foranea, Ciudad)
 
 ## Caracteristicas
@@ -131,9 +134,8 @@ composer dump-autoload
 
 Modificar las siguientes constantes del archivo .env con la siguiente información:
 
-``
 APP_NAME=GIPrueba
-APP_URL=http://gi-prueba.test
+APP_URL=ruta_url_local
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -141,7 +143,7 @@ DB_PORT=3306
 DB_DATABASE=gi-prueba
 DB_USERNAME=nombre_usuario_base_de_datos
 DB_PASSWORD=contraseña_usuario_base_de_datos
-``
+
 
 
 
