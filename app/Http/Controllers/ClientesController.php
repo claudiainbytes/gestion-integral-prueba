@@ -24,6 +24,17 @@ class ClientesController extends Controller
         return view("aplicacion.clientes.cliente", [ 'data' => $clientes , 'numRegistros' => $numRegistros ]);
     }
 
+    public function clientesxciudad($ciudad_id)
+    {
+        $ciudad = Ciudad::find($ciudad_id);
+        $clientes = Cliente::where('ciudad_id', $ciudad_id)->orderBy('nombres','asc')->get();
+        foreach($clientes as $c){
+            $c->ciudad = Ciudad::find($c->ciudad_id);
+        }
+        $numRegistros = Cliente::where('ciudad_id', $ciudad_id)->count();
+        return view("aplicacion.clientes.cliente", [ 'data' => $clientes , 'numRegistros' => $numRegistros, 'ciudad' => $ciudad ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

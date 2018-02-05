@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Ciudad as Ciudad;
+use App\Cliente as Cliente;
 use App\Http\Requests\CiudadesRequest;
 
 class CiudadesController extends Controller
@@ -16,6 +17,9 @@ class CiudadesController extends Controller
     public function index()
     {
         $ciudades = Ciudad::orderBy('nombre','asc')->get();
+        foreach($ciudades as $c){
+            $c->numClientes = Cliente::where('ciudad_id',$c->id)->count();
+        }
         $numRegistros = Ciudad::count();
         return view("aplicacion.ciudades.ciudad", [ 'data' => $ciudades, 'numRegistros' => $numRegistros  ]);
     }

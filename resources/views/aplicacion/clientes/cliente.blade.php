@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<h1 class="page-header">Clientes</h1>
+<h1 class="page-header">Clientes {{ isset($ciudad ) ? $ciudad->nombre : "" }}</h1>
 
 <h4>Total de clientes registrados: {{ $numRegistros }}</h4>
 

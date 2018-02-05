@@ -34,5 +34,6 @@ Route::group(['middleware' => 'web','prefix' => 'clientes'], function() {
     Route::post('/guardar', 'ClientesController@store');
     Route::put('/{id}/guardar', 'ClientesController@update');
     Route::get('/{campo}/{dato}/existe', 'ClientesController@existe');
+    Route::get('/{ciudad_id}', 'ClientesController@clientesxciudad');
 });
 

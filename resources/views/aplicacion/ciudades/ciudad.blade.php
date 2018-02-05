@@ -22,7 +22,7 @@
         <tr>
             <th>#</th>
             <th>Nombre</th>
-            <th></th>
+            <th class="text-center">Total Clientes</th>
             <th></th>
             <th></th>
         </tr>
@@ -31,8 +31,8 @@
     @foreach($data as $k => $r)
         <tr>
             <td>{{ $k+1 }}</td>
-            <td>{{ $r->nombre }}</td>
-            <td></td>
+            <td><a href="/clientes/{{ $r->id }}">{{ $r->nombre }}</a></td>
+            <td class="text-center"><a href="/clientes/{{ $r->id }}">{{ $r->numClientes }}</a></td>
             <td>
                 <a class="btn btn-primary btn-sm btn-block" href="/ciudades/{{ $r->id }}/editar">Editar</a>
             </td>
