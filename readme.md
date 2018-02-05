@@ -135,13 +135,19 @@ composer dump-autoload
 Modificar las siguientes constantes del archivo .env con la siguiente información:
 
 APP_NAME=GIPrueba
+
 APP_URL=ruta_url_local
 
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=gi-prueba
+
 DB_USERNAME=nombre_usuario_base_de_datos
+
 DB_PASSWORD=contraseña_usuario_base_de_datos
 
 
