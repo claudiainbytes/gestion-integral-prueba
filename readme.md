@@ -46,8 +46,7 @@ Clic sobre la imagen para ver el demo en YouTube
 
 ## Demo en Heroku
 
-
-[![Clic aquí para ver el demo en Heroku](https://www.youtube.com/watch?v=A57AdCUKsH8)]
+[Clic aquí para ver el demo en Heroku](https://www.youtube.com/watch?v=A57AdCUKsH8)]
 
 ## Modelos
 
